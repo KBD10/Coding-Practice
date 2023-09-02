@@ -1,0 +1,21 @@
+My Approach 
+
+Selection Sorting approach 
+
+1) In first iteration the largest will be in the last index.
+
+2) In the next iteration the if the second largest is not equal to the largest then will return the
+largest element of the current iterating list.
+
+3) will continue the iteration on the shortening list until we found the largest element of the current list
+which is not equal to the largest of the array.
+
+4) if not found then return -1
+
+Time Complexity - Worst Case is O(n^2)
+
+2nd Approach In one iteration
+
+1) Using 2 variable 
+
+
