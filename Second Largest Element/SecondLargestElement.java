@@ -1,7 +1,7 @@
 import java.util.* ;
 import java.io.*; 
 public class Solution {
-	public static int findSecondLargest(int n, int[] arr) {
+	public static int findSecondLargest1stApproach(int n, int[] arr) {
 		// Write your code here.
 		int max = 0;
 		int previousMax = Integer.MIN_VALUE;
@@ -25,5 +25,25 @@ public class Solution {
 		}
 	}
 	return -1;
+	}
+
+	public static int findSecondLargest(int n, int[] arr) {
+		// Write your code here.
+		int largest = Integer.MIN_VALUE;
+		int secondLargest = Integer.MIN_VALUE;
+		for(int i = 0; i < n; i++){
+			if(arr[i] > largest){
+				secondLargest = largest;
+				largest = arr[i];
+			}
+			else if(arr[i] > secondLargest && arr[i] != largest){
+				secondLargest = arr[i];
+			}
+		}
+		if(secondLargest == Integer.MIN_VALUE){
+			return -1;
+		}else{
+			return secondLargest;
+		}
 	}
 }
